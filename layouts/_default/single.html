@@ -13,10 +13,12 @@
 <content>
   {{ .Content }}
 </content>
+<footer>
 <p>
   {{ range (.GetTerms "tags") }}
   <a href="{{ .Permalink }}">#{{ .LinkTitle }}</a>
   {{ end }}
 </p>
+</footer>
 </article>
 {{ end }}
