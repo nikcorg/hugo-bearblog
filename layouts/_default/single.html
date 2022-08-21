@@ -23,4 +23,17 @@
 </p>
 </footer>
 </article>
+
+{{ if or .PrevInSection .NextInSection }}
+<footer>
+<nav class="prev-next">
+{{ if .PrevInSection }}{{ with .PrevInSection }}
+<p class="prev"><a href="{{ .RelPermalink }}" title="{{ .Title }}">Previous post<span>: {{ .Title }}</span></a></p>
+{{ end }}{{ end }}
+{{ if .NextInSection }}{{ with .NextInSection }}
+<p class="next"><a href="{{ .RelPermalink }}" title="{{ .Title }}">Next post<span>: {{ .Title }}</span></a></p>
+{{ end }}{{ end }}
+</nav>
+</footer>
+{{ end }}
 {{ end }}
