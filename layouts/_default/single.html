@@ -1,6 +1,7 @@
 {{ define "main" }}
 {{ if eq .Type "blog" }}{{ if not .Params.menu }}
 <article>
+<header>
 <h1>{{ .Title }}</h1>
 <p>
   <i>
@@ -9,6 +10,7 @@
     </time>
   </i>
 </p>
+</header>
 {{ end }}{{ end }}
 <content>
   {{ .Content }}
